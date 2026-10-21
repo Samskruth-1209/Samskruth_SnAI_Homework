@@ -1,0 +1,18 @@
+Solution:
+cd api-service
+git init
+git add README.md
+git commit -m "Add documentation"
+git add server.js routes.js package.json
+git commit -m "Add server files"
+git status 
+git log --oneline
+
+Approach:
+1. It moves into api-service directory
+2. Then it initializes the git in the folder
+3. It stages the file named README.md
+4. Then it commits with the message Add documentation
+5. Again it stages server.js routes.js package.json files
+6. Then again it commits these three files with message Add server files
+7. It runs git status git log --oneline.
