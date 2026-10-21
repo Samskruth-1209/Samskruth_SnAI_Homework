@@ -1,0 +1,20 @@
+Solution:
+cd client-app
+git init
+echo "ABC" > index.html
+echo "!#@@#" > app.js
+git add index.html app.js
+git commit -m "Initial client files"
+git remote add origin https://github.com/startup/client-app.git
+git push -u origin main
+git log 
+
+Approach:
+1. Move into client-app directory
+2. Initialize git in the folder
+3. Write some content in the both of the files
+4. Then stage both of the files
+5. Then commit with the message Initial client files
+6. Now register the remote 'URL' as origin 
+7. Then push into main branch
+8. Finally run git log ...
