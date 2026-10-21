@@ -1,0 +1,13 @@
+Solution:
+cd EventApp
+cd config
+cat .env
+cp .env db_password.txt
+mv db_password.txt ..
+
+Approach:
+1. Moves into EventApp directory.
+2. Again it moves into config subdirectory inside EventApp.
+3. cat .env it reads out the hidden file text.
+4. Copies the hidden .env file to a new file named db_password.txt
+5. It moves the db_password.txt file into the parent directory.
