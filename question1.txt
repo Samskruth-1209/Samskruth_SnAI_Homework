@@ -1,0 +1,29 @@
+Solution:
+mkdir project-files
+cd project-files
+touch report.docx summary.docx draft.docx
+cp report.docx report_backup.docx
+mkdir old/
+mv draft.docx old/
+mv summary.docx final_summary.docx
+cp final_summary.docx old/
+rm report_backup.docx
+Approach:
+1.mkdir project-files
+Creates a new directory named project-files.
+2.cd project-files
+Changes the current working directory to project-files so all subsequent operations take place inside it.
+3. touch report.docx summary.docx draft.docx
+Creates three empty files at once: report.docx, summary.docx, and draft.docx.
+4. cp report.docx report_backup.docx
+Makes a copy of report.docx and names the replica report_backup.docx.
+5. mkdir old/
+Creates a subfolder named old inside project-files.
+6. mv draft.docx old/
+Moves draft.docx into the newly created old folder.
+7. mv summary.docx final_summary.docx
+Renames summary.docx to final_summary.docx.
+8. cp final_summary.docx old/
+Copies final_summary.docx into the old folder while keeping the original inside project-files.
+9. rm report_backup.docx
+Permanently deletes report_backup.docx.
