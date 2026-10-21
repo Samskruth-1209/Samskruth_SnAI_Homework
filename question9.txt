@@ -1,0 +1,32 @@
+Solution:
+mkdir -p pipeline/stages/build
+mkdir -p pipeline/stages/test/unit/integration
+mkdir -p pipeline/env/staging
+mkdir -p pipeline/env/prod
+mkdir -p pipeline/artifacts/old
+chmod 750 pipeline/stages
+chmod 770 pipeline/artifacts
+chmod 700 pipeline/env
+cd pipeline/stages/build/
+touch app.py config.json NOTES.md
+echo "Build stage initialized." > NOTES.md
+cd ../..
+cd artifacts/old/
+touch build.log test.log deploy.log
+chmod 640 build.log test.log deploy.log 
+
+Approach:
+1. mkdir -p pipeline/stages/build: Creates a directory path for build stages. The -p flag ensures parent directories are created automatically if they don't exist and prevents errors if they already do.
+2. mkdir -p pipeline/stages/test/unit/integration: Creates nested directories for testing stages (unit and integration tests).
+3. mkdir -p pipeline/env/staging and prod: Creates deployment environment directories.
+4. mkdir -p pipeline/artifacts/old: Creates a directory to store archived build outputs or logs.
+5. chmod 750 pipeline/stages: The owner can read, write, and execute; members of the group can read and execute; others have no access.
+6. chmod 770 pipeline/artifacts: The owner and group have full read, write, and execute access; others have no access.
+7. chmod 700 pipeline/env: Only the owner has full access; group and others have zero permissions (securing environment configurations).
+8. cd pipeline/stages/build/: Navigates into the build stage directory.
+9. touch app.py config.json NOTES.md: Creates three empty files within the build directory.
+10.echo "Build stage initialized." > NOTES.md: Writes the text "Build stage initialized." into the NOTES.md file, overwriting any existing content.
+11.cd ../..: Navigates back up two directory levels to the root workspace.
+12.cd artifacts/old/: Navigates into the archived artifacts directory.
+13.touch build.log test.log deploy.log: Creates three log files.
+14.chmod 640 build.log test.log deploy.log: To the log files, meaning the owner can read and write, the group can read, and others have no permissions.
