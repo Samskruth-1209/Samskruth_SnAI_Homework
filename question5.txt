@@ -1,0 +1,16 @@
+Solution:
+touch hello.py
+echo '#!/usr/bin/env python3' > hello.py
+echo 'print("Hello from Python")' >> hello.py
+chmod +x hello.py
+./hello.py
+
+Approach:
+1. First it creates file name called hello.py.
+2. Then to execute in python we should execute shebang line in file.
+3. Next write in python language.
+4. Next enable the permission to file to execute.
+5. Finally execute it.
+
+Output:
+Hello from Python
