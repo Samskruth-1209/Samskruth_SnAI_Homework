@@ -1,0 +1,21 @@
+Solution:
+#!/bin/bash
+mkdir -p service/controllers
+mkdir -p service/models
+mkdir -p service/routes
+mkdir -p service/middleware
+echo "API Service" > service/README.md
+echo 'console.log("Server started");' > service/server.js
+chmod +x create-service
+./create-service
+
+Approach:
+1. #!/bin/bash: It shows that script should be executed in bash interpreter.
+2. mkdir -p service/controllers
+   mkdir -p service/models
+   mkdir -p service/routes
+   mkdir -p service/middleware: creates folder inside the folder
+3. echo "API Service" > service/README.md: It creates new file inside the service directory and given text is written.
+4. echo 'console.log("Server started");' > service/server.js: It creates new file inside the service directory and given text is written.
+5. chmod +x create-service: It enables the permission to execute to directory
+6. ./create-service: Executes the newly prepared script to generate the project folder structure
