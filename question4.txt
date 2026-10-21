@@ -1,0 +1,13 @@
+Solution:
+chmod 700 deployment/app/*.py
+chmod 770 deployment/datasets/
+chmod 770 deployment/datasets/*.csv
+chmod 644 deployment/docs/OVERVIEW.md
+chmod 755 deployment/bin/*.sh
+
+Approach:
+1. It sets permissions for all Python files in deployment/app/ to 700.
+2. It sets permissions for the deployment/datasets/ directory itself to 770.
+3. It sets permissions for all CSV files inside deployment/datasets/ to 770.
+4. It sets permissions for the documentation file OVERVIEW.md to 644.
+5. It sets permissions for all shell scripts in deployment/bin/ to 755.
