@@ -1,0 +1,20 @@
+Solution:
+cat << 'EOF' > build.sh
+#!/bin/bash
+gcc hello.c -o hello
+EOF
+chmod +x build.sh
+chmod +x hello
+./build.sh
+./hello
+
+Approach:
+1. cat << 'EOF' is to create a new file named build.sh and redirect all following lines into it until reaching the word EOF.
+2. The shebang line, specifying that build.sh should be executed using the bash shell interpreter..
+3. It compiles the C source file hello.c and outputs the word hello.
+4. It shows that end of here in the creation of file build.sh .
+5. Next it grants the permission to execute to both of the files.
+6. Finally runs the newly compiled to produce the output.
+
+Output:
+Hello from C
